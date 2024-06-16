@@ -1,0 +1,36 @@
+name: swm_icons
+description: "The SWM Icon pack for Flutter. Provides 200+ additional icons to use in your apps."
+version: 0.0.1
+homepage: https://github.com/arifai/swm_icons
+repository: https://github.com/arifai/swm_icons
+issue_tracker: https://github.com/arifai/swm_icons/issues
+topics:
+  - icons
+  - swm
+  - swm_icons
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  fonts:
+    - family: SWMIconsBroken
+      fonts:
+        - asset: fonts/SWMIconsBroken.ttf
+    - family: SWMIconsCurved
+      fonts:
+        - asset: fonts/SWMIconsCurved.ttf
+    - family: SWMIconsOutline
+      fonts:
+        - asset: fonts/SWMIconsOutline.ttf
