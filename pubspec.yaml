@@ -7,7 +7,7 @@ issue_tracker: https://github.com/arifai/swm_icons/issues
 topics:
   - icons
   - swm
-  - swm_icons
+  - swm-icons
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
