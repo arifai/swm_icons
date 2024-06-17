@@ -36,7 +36,7 @@ class SWMIcon extends StatelessWidget {
     final Color color =
         this.color ?? IconTheme.of(context).color ?? Colors.black;
     final String styleName =
-        (style ?? _SWMIconsTheme.maybeStyleOf(context) ?? SWMIconStyles.outline)
+        (style ?? SWMIconsTheme.maybeStyleOf(context) ?? SWMIconStyles.outline)
             .name;
 
     return Icon(
@@ -45,20 +45,5 @@ class SWMIcon extends StatelessWidget {
       color: color,
       semanticLabel: semanticLabel,
     );
-  }
-}
-
-class _SWMIconsTheme extends InheritedWidget {
-  const _SWMIconsTheme({required super.child, required this.style});
-
-  final SWMIconStyles style;
-
-  @override
-  bool updateShouldNotify(covariant _SWMIconsTheme oldWidget) {
-    return style != oldWidget.style;
-  }
-
-  static SWMIconStyles? maybeStyleOf(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<_SWMIconsTheme>()?.style;
   }
 }
