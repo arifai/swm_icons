@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
 
 ## Icons
 
-<center><img src="screenshot.png" /></center>
+[![icon gallery preview](screenshot.png)]
 
 ## License
 
