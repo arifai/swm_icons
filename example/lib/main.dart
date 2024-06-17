@@ -13,24 +13,35 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final List<SWMIcons> _icons = SWMIcons.values;
+  final ScrollController _gridController = ScrollController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    _gridController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('SWM Icons example app')),
-        body: const Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SWMIcon(SWMIcons.air, size: 40),
-              SWMIcon(SWMIcons.alarm, style: SWMIconStyles.broken),
-              SWMIcon(
-                SWMIcons.wifi,
-                style: SWMIconStyles.curved,
-                color: Colors.red,
-              ),
-            ],
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: const Text('SWM Icons example app'),
+          centerTitle: true,
+        ),
+        body: GridView.builder(
+          controller: _gridController,
+          itemCount: _icons.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 5,
+            crossAxisSpacing: 6,
+            mainAxisSpacing: 6,
           ),
+          itemBuilder: (_, i) {
+            return SWMIcon(_icons[i], style: SWMIconStyles.broken);
+          },
         ),
       ),
     );
