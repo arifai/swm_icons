@@ -5,6 +5,7 @@ homepage: https://github.com/arifai/swm_icons
 repository: https://github.com/arifai/swm_icons
 issue_tracker: https://github.com/arifai/swm_icons/issues
 topics:
+  - assets
   - icons
   - swm
   - swm-icons
@@ -16,7 +17,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  plugin_platform_interface: ^2.0.2
 
 dev_dependencies:
   flutter_test:
