@@ -1,6 +1,6 @@
 name: swm_icons
 description: "The SWM Icon pack for Flutter. Provides 200+ additional icons to use in your apps."
-version: 0.0.1
+version: 0.2.0
 homepage: https://github.com/arifai/swm_icons
 repository: https://github.com/arifai/swm_icons
 issue_tracker: https://github.com/arifai/swm_icons/issues
