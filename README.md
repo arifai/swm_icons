@@ -50,7 +50,3 @@ class MyApp extends StatelessWidget {
 ## Icons
 
 ![icon gallery preview](screenshot.png)
-
-## License
-
-MIT
