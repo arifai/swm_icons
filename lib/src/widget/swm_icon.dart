@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:swm_icons/swm_icons.dart';
 
 /// {@template swm_icon}
-/// Create a SWM Icon.
+/// A widget that displays a SWM icon with customizable properties.
 /// {@endtemplate}
 class SWMIcon extends StatelessWidget {
   /// {@macro swm_icon}
@@ -15,16 +15,19 @@ class SWMIcon extends StatelessWidget {
     this.semanticLabel,
   });
 
-  /// SWM icon
+  /// The icon to display.
   final SWMIcons icon;
 
-  /// Color icon
+  /// The color to use when drawing the icon.
+  /// If null, defaults to the icon theme color or [Colors.black].
   final Color? color;
 
-  /// Size icon
+  /// The size of the icon in logical pixels.
+  /// If null, defaults to the icon theme size or 20.
   final double? size;
 
-  /// SWM Icon style. If null, the default value is [SWMIconStyle.outline]
+  /// The style of the icon.
+  /// If null, defaults to [SWMIconStyles.outline].
   final SWMIconStyles? style;
 
   /// Semantic label for the icon.

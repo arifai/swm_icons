@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:swm_icons/swm_icons.dart';
 
 /// {@template swm_icon_theme}
-/// SWM Icons Theme.
+/// A theme for SWM icons, allowing customization of icon styles.
 /// {@endtemplate}
-class SWMIconsTheme extends InheritedWidget {
+class SWMIconsTheme extends InheritedTheme {
   /// {@macro swm_icon_theme}
   const SWMIconsTheme({super.key, required super.child, required this.style});
 
-  /// SWM Icons style.
+  /// The style to be applied to SWM icons within this theme.
   final SWMIconStyles style;
 
   @override
@@ -16,11 +16,11 @@ class SWMIconsTheme extends InheritedWidget {
     return style != oldWidget.style;
   }
 
-  /// The style from the closest instance of this class that encloses the given context.
+  /// Returns the style from the closest instance of this class that encloses the given context.
   ///
   /// Typical usage is as follows:
   /// ```dart
-  /// final String styleName = (style ?? SWMIconsTheme.styleOf(context)).name;
+  /// final String styleName = SWMIconsTheme.styleOf(context).name;
   /// ```
   static SWMIconStyles styleOf(BuildContext context) {
     final SWMIconStyles? swmIconStyles = maybeStyleOf(context);
@@ -30,13 +30,18 @@ class SWMIconsTheme extends InheritedWidget {
     return swmIconStyles!;
   }
 
-  /// The style from the closest instance of this class that encloses the given context, if any.
+  /// Returns the style from the closest instance of this class that encloses the given context, if any.
   ///
   /// Typical usage is as follows:
   /// ```dart
-  /// final String styleName = (style ?? SWMIconsTheme.styleOf(context) ?? SWMIconStyles.outline).name;
+  /// final String styleName = (SWMIconsTheme.maybeStyleOf(context) ?? SWMIconStyles.outline).name;
   /// ```
   static SWMIconStyles? maybeStyleOf(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<SWMIconsTheme>()?.style;
+  }
+
+  @override
+  Widget wrap(BuildContext context, Widget child) {
+    return SWMIconsTheme(style: style, child: child);
   }
 }
