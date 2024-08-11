@@ -1,5 +1,5 @@
 /// {@template swm_icon_style}
-/// SWM Icon style
+/// Represents different styles for SWM icons.
 /// {@endtemplate}
 enum SWMIconStyles {
   /// Broken style.
@@ -14,6 +14,6 @@ enum SWMIconStyles {
   /// {@macro swm_icon_style}
   const SWMIconStyles(this.name);
 
-  /// SMW icons style name.
+  /// The name of the SWM icon style.
   final String name;
 }
